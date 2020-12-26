@@ -14,7 +14,7 @@ function setup(){
 function draw(){
     background(0);
     for(let i = 0; i<arrayToSort.length;i++){
-        stroke(255,0,0);
+        stroke(0,255,0);
         strokeWeight(8);
         line(i*10,height,i*10,height-arrayToSort[i]);
     }
