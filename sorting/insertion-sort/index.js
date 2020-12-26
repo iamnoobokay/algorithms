@@ -1,6 +1,7 @@
 let arrayToSort = [];
 let i = 1;
-let j = 0;
+let j = i-1;
+let tempVar = i;
 
 
 function setup(){
@@ -18,17 +19,19 @@ function draw(){
         line(i*10,height,i*10,height-arrayToSort[i]);
     }
 
-    if(arrayToSort[j]>arrayToSort[i]){
+    if(arrayToSort[j]>arrayToSort[tempVar]){
         let temp = arrayToSort[j];
-        arrayToSort[j] = arrayToSort[i];
-        arrayToSort[i] = temp;
+        arrayToSort[j] = arrayToSort[tempVar];
+        arrayToSort[tempVar] = temp;
     }
         
     if(i<arrayToSort.length){
-        j++;
-        if(j>=i){
+        j--;
+        tempVar--;
+        if(j<0){
             i++;
-            j=0;
+            j=i-1;
+            tempVar=i;
         }
     }
 }
