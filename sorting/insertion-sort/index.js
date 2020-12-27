@@ -5,9 +5,9 @@ let tempVar = i;
 
 
 function setup(){
-    createCanvas(1024,500);
+    createCanvas(1340,620);
     frameRate(60);
-    for(let i=0;i<=width/10;i++){
+    for(let i=0;i<=width/12;i++){
         arrayToSort[i] = random(height);
     }
 }
@@ -15,8 +15,8 @@ function draw(){
     background(0);
     for(let i = 0; i<arrayToSort.length;i++){
         stroke(0,0,255);
-        strokeWeight(8);
-        line(i*10,height,i*10,height-arrayToSort[i]);
+        strokeWeight(10);
+        line(i*12,height,i*12,height-arrayToSort[i]);
     }
 
     if(arrayToSort[j]>arrayToSort[tempVar]){
