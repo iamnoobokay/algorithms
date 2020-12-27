@@ -46,7 +46,6 @@ function draw(){
     background(0);
     for(let i = 0; i<arrayToSort.length;i++){
         stroke(255);
-        // strokeWeight(10);
         line(i,height,i,height-arrayToSort[i]);
     }
     // bubble sort algorithm
